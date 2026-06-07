@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XV Emilia | Invitacion Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="audio-toggle" id="audioToggle" type="button" aria-label="Reproducir musica" aria-pressed="false">
+      <span class="audio-toggle__icon audio-toggle__icon--play" aria-hidden="true"></span>
+      <span class="audio-toggle__icon audio-toggle__icon--pause" aria-hidden="true"></span>
+    </button>
+    <audio id="invitationAudio" src="musica.mp3" preload="auto" loop></audio>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__photo hero__photo--one active" src="foto%20de%20portada.jpg" alt="" />
+          <img class="hero__photo hero__photo--two" src="foto%20de%20portada2.jpg" alt="" />
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="kicker">Mis quince años</p>
+          <h1>Emilia</h1>
+        </div>
+        <div class="hero__wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 230" preserveAspectRatio="none" focusable="false">
+            <path class="hero__wave-blush hero__wave-blush--one" d="M0 86c99-31 184-28 278 1 111 35 199 73 342 30 108-32 182-92 314-83 134 9 201 86 341 83 72-2 118-23 165-54v167H0Z" />
+            <path class="hero__wave-blush hero__wave-blush--two" d="M0 123c110-49 204-40 312-4 110 36 190 63 328 19 115-37 182-82 302-72 135 12 196 72 332 76 74 2 114-12 166-42v130H0Z" />
+            <path class="hero__wave-blush hero__wave-blush--three" d="M0 158c105-35 184-22 283 7 120 35 207 42 339-5 110-39 184-78 304-66 136 13 200 78 339 78 78 0 123-20 175-54v112H0Z" />
+            <path class="hero__wave-gold" d="M0 116c108-42 198-28 302 5 116 37 198 55 335 9 109-37 181-86 306-76 136 11 198 78 335 80 72 1 113-16 162-45" />
+            <path class="hero__wave-paper" d="M0 172c104-39 190-25 294 8 119 37 210 48 344 3 111-37 184-79 303-68 137 13 202 81 341 83 75 1 118-16 158-44v76H0Z" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="countdown section" id="cuenta">
+        <div class="countdown__ornament" aria-hidden="true">
+          <span class="countdown__ring countdown__ring--one"></span>
+          <span class="countdown__ring countdown__ring--two"></span>
+          <span class="countdown__ring countdown__ring--three"></span>
+          <img class="countdown__butterflies" src="mariposas.png" alt="" aria-hidden="true" />
+          <span class="countdown__sash"></span>
+          <div class="countdown__flowers countdown__flowers--main"></div>
+          <div class="countdown__flowers countdown__flowers--mini"></div>
+        </div>
+        <div class="countdown__panel">
+          <p class="eyebrow">Falta</p>
+          <h2>Cuenta regresiva</h2>
+          <div class="countdown__grid" aria-live="polite">
+            <div><strong id="days">0</strong><span>Dias</span></div>
+            <div><strong id="hours">0</strong><span>Hs</span></div>
+            <div><strong id="minutes">0</strong><span>Min</span></div>
+            <div><strong id="seconds">0</strong><span>Seg</span></div>
+          </div>
+          <span class="countdown__heart" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="intro section">
+        <div class="intro__text">
+          <p class="eyebrow">Una noche especial</p>
+          <h2>Quiero celebrar mis 15 con vos</h2>
+          <p>Hay momentos que se guardan para siempre. Te espero para compartir una noche con musica, fotos, brindis y todos esos detalles que hacen que la fiesta sea unica.</p>
+        </div>
+        <div class="polaroid">
+          <span class="polaroid__sprig polaroid__sprig--top" aria-hidden="true"></span>
+          <img src="3.jpg" alt="Foto de la cumpleanera" />
+          <span>Emi XV</span>
+          <span class="polaroid__sprig polaroid__sprig--bottom" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="details section" id="fiesta">
+        <p class="eyebrow">Detalles del evento</p>
+        <h2>La fiesta</h2>
+        <div class="details__grid">
+          <article class="details__card--with-flowers">
+            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <span class="details__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 3v3" />
+                <path d="M17 3v3" />
+                <path d="M4 8h16" />
+                <path d="M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                <path d="M8 12h3" />
+                <path d="M8 16h5" />
+              </svg>
+            </span>
+            <h3>Fecha</h3>
+            <p>Sabado 21 de noviembre de 2026</p>
+            <button class="detail-btn" type="button" data-url="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV%20Emilia&dates=20261122T000000Z/20261122T070000Z&details=Fiesta%20de%2015%20de%20Emilia">Agendar</button>
+          </article>
+          <article class="details__card--with-flowers">
+            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <span class="details__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+            </span>
+            <h3>Lugar</h3>
+            <p>Salon Jardin del Lago - Buenos Aires</p>
+            <button class="detail-btn" type="button" data-url="https://www.google.com/maps/search/?api=1&query=Buenos%20Aires%20salon%20eventos">Ver mapa</button>
+          </article>
+          <article class="details__card--with-flowers">
+            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <span class="details__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M9 4 6 6l-3 1.5L5 12l2-1v9h10v-9l2 1 2-4.5L18 6l-3-2a4 4 0 0 1-6 0Z" />
+                <path d="M9 4c.8 2 5.2 2 6 0" />
+              </svg>
+            </span>
+            <h3>Dress code</h3>
+            <p>Elegante sport. Colores claros, plateados o rosados son bienvenidos.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-wave section-wave--gifts" aria-hidden="true">
+        <svg viewBox="0 0 1440 360" preserveAspectRatio="none" focusable="false">
+          <path class="section-wave__blush" d="M0 214c150 32 323 22 520-31 230-61 420-137 672-146 172-6 307 23 440 88v235H0Z" />
+          <path class="section-wave__paper" d="M0 252c167 35 341 22 522-33 244-74 428-157 681-168 168-8 299 22 439 92v217H0Z" />
+        </svg>
+      </div>
+
+      <section class="gifts section" id="regalos">
+        <img class="gifts__bouquet gifts__bouquet--left" src="assets/floral-watercolor-side.png" alt="" aria-hidden="true" />
+        <img class="gifts__bouquet gifts__bouquet--right" src="assets/floral-watercolor-side.png" alt="" aria-hidden="true" />
+        <img class="gifts__icon" src="regalo.gif" alt="" aria-hidden="true" />
+        <p class="eyebrow">Un detalle especial</p>
+        <h2>Regalos</h2>
+        <p class="section__lead">Si deseas regalarme algo más que tu hermosa presencia...</p>
+        <button class="primary-btn gifts__button" id="openGiftModal" type="button">Ver mas</button>
+      </section>
+
+      <section class="music section">
+        <p class="eyebrow">Modo fiesta</p>
+        <h2>Musica</h2>
+        <iframe
+          class="spotify"
+          title="Playlist de Spotify"
+          src="https://open.spotify.com/embed/playlist/7c5mFVQQuOW3j0qU5jjmaI?utm_source=generator"
+          width="100%"
+          height="352"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </section>
+
+      <section class="gallery section" id="galeria">
+        <p class="eyebrow">Recuerdos</p>
+        <h2>Galeria de  fotos</h2>
+        <div class="carousel" aria-label="Galeria de fotos">
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Foto anterior">&lsaquo;</button>
+          <div class="carousel__viewport">
+            <button class="carousel__slide active" type="button">
+              <img src="1.jpg" alt="Foto de galeria 1" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="2.jpg" alt="Foto de galeria 2" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="3.jpg" alt="Foto de galeria 3" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="foto%20de%20portada2.jpg" alt="Foto de galeria 4" />
+            </button>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Foto siguiente">&rsaquo;</button>
+          <div class="carousel__dots" aria-label="Seleccionar foto"></div>
+        </div>
+      </section>
+
+      <section class="rsvp section" id="rsvp">
+        <h2>Confirmar asistencia</h2>
+        <p>Confirmar antes del 1 de noviembre</p>
+        <a class="rsvp__button" href="https://bloomdate-rsvp.netlify.app/r/cumple-xv" target="_blank" rel="noreferrer">Confirmar asistencia</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Diseñado con <span aria-hidden="true">❤</span> por <strong>Bloomdate</strong></p>
+      <div class="site-footer__links" aria-label="Redes de Bloomdate">
+        <a href="https://wa.me/541140436324?text=quiero%20mas%20info%20sobre%20invitaciones" target="_blank" rel="noreferrer" aria-label="WhatsApp de Bloomdate">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M3.7 20.3 5 16.5a8 8 0 1 1 3.3 3Z" />
+            <path d="M9.1 8.4c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.6c-.1.1-.2.3-.1.5.4.8 1.1 1.6 2.2 2.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.7c.2.1.4.3.4.5 0 .5-.3 1.3-.9 1.6-.8.4-2 .3-3.8-.8-2.8-1.7-4.5-4.2-4.6-5.6 0-.5.3-1.1.6-1.4Z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/bloomdate.invitaciones/" target="_blank" rel="noreferrer" aria-label="Instagram de Bloomdate">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+            <circle cx="12" cy="12" r="3.5" />
+            <path d="M16.8 7.2h.1" />
+          </svg>
+        </a>
+        <a href="https://www.bloomdate.site" target="_blank" rel="noreferrer" aria-label="Web de Bloomdate">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="12" rx="1.5" />
+            <path d="M6 9h.1M8.5 9h.1M11 9h.1" />
+            <path d="M7 13h1.2l.6-2 .7 2h1.1l.8-2 .7 2h1.1l.8-2 .7 2H16" />
+            <path d="m15 16 4 3" />
+            <path d="m18.5 16.5.5 2.5-2.5-.5Z" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <dialog id="lightbox">
+      <button id="closeLightbox" aria-label="Cerrar">x</button>
+      <img alt="Foto ampliada" />
+    </dialog>
+
+    <dialog id="giftModal" class="gift-modal" aria-labelledby="giftModalTitle">
+      <div class="gift-modal__card">
+        <button class="gift-modal__close" id="closeGiftModal" type="button" aria-label="Cerrar">x</button>
+        <div class="gift-modal__flowers" aria-hidden="true"></div>
+        <div class="gift-modal__icon" aria-hidden="true">
+          <img src="regalo.gif" alt="" />
+        </div>
+        <h2 id="giftModalTitle">Regalos</h2>
+        <p>Alias:bloomdate.invitaciones</p>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
