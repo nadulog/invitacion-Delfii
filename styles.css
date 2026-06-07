@@ -160,10 +160,10 @@ button {
 .hero__wave {
   position: absolute;
   right: 0;
-  bottom: -26px;
+  bottom: -2px;
   left: 0;
   z-index: 3;
-  height: clamp(116px, 14vw, 178px);
+  height: clamp(88px, 10vw, 132px);
   pointer-events: none;
 }
 
@@ -174,7 +174,7 @@ button {
 }
 
 .hero__wave-blush--one {
-  fill: rgba(244, 154, 181, 0.34);
+  fill: rgba(232, 119, 151, 0.34);
 }
 
 .hero__wave-blush--two {
@@ -191,8 +191,8 @@ button {
 
 .hero__wave-gold {
   fill: none;
-  stroke: rgba(198, 161, 91, 0.78);
-  stroke-width: 3;
+  stroke: rgba(198, 161, 91, 0.62);
+  stroke-width: 2;
   stroke-linecap: round;
 }
 
@@ -275,9 +275,14 @@ button {
 .countdown {
   position: relative;
   display: grid;
+  --countdown-ornament-size: min(430px, calc(100vw - 24px));
+  --countdown-ornament-top: 34px;
+  --countdown-panel-size: calc(var(--countdown-ornament-size) * 0.82);
+  --countdown-panel-top: calc(var(--countdown-ornament-top) + (var(--countdown-ornament-size) * 0.09));
   min-height: 500px;
   overflow: hidden;
-  place-items: center;
+  justify-items: center;
+  align-items: start;
   padding-top: 36px;
   padding-bottom: 42px;
   text-align: center;
@@ -285,10 +290,10 @@ button {
 
 .countdown__ornament {
   position: absolute;
-  top: 34px;
+  top: var(--countdown-ornament-top);
   left: 50%;
   z-index: 4;
-  width: min(430px, calc(100vw - 24px));
+  width: var(--countdown-ornament-size);
   aspect-ratio: 1;
   translate: -50% 0;
   pointer-events: none;
@@ -327,14 +332,19 @@ button {
 }
 
 .countdown__panel {
-  position: relative;
+  position: absolute;
+  top: var(--countdown-panel-top);
+  left: 50%;
   z-index: 2;
   display: grid;
   justify-items: center;
-  width: min(340px, calc(100vw - 44px));
-  min-height: min(340px, calc(100vw - 44px));
+  width: var(--countdown-panel-size);
+  aspect-ratio: 1;
+  min-height: 0;
+  margin: 0;
+  translate: -50% 0;
   align-content: center;
-  padding: 42px clamp(16px, 4vw, 34px) 34px;
+  padding: 38px clamp(16px, 4vw, 34px) 56px;
   border-radius: 50%;
   background: rgba(255, 252, 248, 0.88);
   box-shadow: 0 26px 70px rgba(69, 35, 48, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.68);
@@ -411,11 +421,13 @@ form {
 }
 
 .countdown__heart {
-  position: relative;
-  top: 62px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
   width: 20px;
   height: 20px;
-  margin-top: 42px;
+  margin: 0;
+  translate: -50% 0;
   rotate: -45deg;
   background: rgba(208, 130, 144, 0.98);
 }
@@ -544,7 +556,7 @@ form {
 
 .details__flowers {
   position: absolute;
-  top: -112px;
+  top: -126px;
   left: 50%;
   z-index: 4;
   width: min(240px, 80%);
@@ -574,7 +586,6 @@ form {
   background: rgba(255, 250, 252, 0.7);
   backdrop-filter: blur(8px);
   box-shadow: 0 12px 30px rgba(232, 119, 151, 0.16);
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .details__card--with-flowers {
@@ -585,13 +596,6 @@ form {
 .details article > :not(.details__flowers) {
   position: relative;
   z-index: 5;
-}
-
-.details article:hover {
-  transform: translateY(-6px);
-  border-color: rgba(232, 119, 151, 0.34);
-  background: rgba(255, 250, 252, 0.86);
-  box-shadow: 0 18px 46px rgba(232, 119, 151, 0.22);
 }
 
 .details__icon {
@@ -684,38 +688,6 @@ form {
   display: grid;
   justify-items: center;
   text-align: center;
-}
-
-.gifts__bouquet {
-  position: absolute;
-  top: 48%;
-  z-index: 0;
-  width: min(210px, 24vw);
-  height: auto;
-  opacity: 0;
-  object-fit: contain;
-  pointer-events: none;
-  transition: opacity 700ms ease, transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.gifts__bouquet--left {
-  left: max(-34px, calc(50% - 560px));
-  transform: translate(-54px, -50%) rotate(-4deg);
-}
-
-.gifts__bouquet--right {
-  right: max(-34px, calc(50% - 560px));
-  transform: translate(54px, -50%) rotate(4deg) scaleX(-1);
-}
-
-.gifts.is-visible .gifts__bouquet--left {
-  opacity: 1;
-  transform: translate(0, -50%) rotate(0deg);
-}
-
-.gifts.is-visible .gifts__bouquet--right {
-  opacity: 1;
-  transform: translate(0, -50%) rotate(0deg) scaleX(-1);
 }
 
 .gifts__icon {
@@ -1107,8 +1079,8 @@ dialog img {
   }
 
   .hero__wave {
-    bottom: -18px;
-    height: 112px;
+    bottom: -1px;
+    height: 86px;
   }
 
   .hero__media {
@@ -1132,14 +1104,18 @@ dialog img {
   }
 
   .countdown {
+    --countdown-ornament-size: min(292px, calc(100vw - 38px));
+    --countdown-ornament-top: 24px;
+    --countdown-panel-size: calc(var(--countdown-ornament-size) * 0.82);
+    --countdown-panel-top: calc(var(--countdown-ornament-top) + (var(--countdown-ornament-size) * 0.09));
     min-height: 340px;
     padding-top: 24px;
     padding-bottom: 28px;
   }
 
   .countdown__ornament {
-    top: 36px;
-    width: min(292px, calc(100vw - 38px));
+    top: var(--countdown-ornament-top);
+    width: var(--countdown-ornament-size);
   }
 
   .countdown__butterflies {
@@ -1149,9 +1125,10 @@ dialog img {
   }
 
   .countdown__panel {
-    width: min(268px, calc(100vw - 34px));
-    min-height: min(268px, calc(100vw - 34px));
-    padding: 34px 14px 28px;
+    width: var(--countdown-panel-size);
+    min-height: 0;
+    margin: 0;
+    padding: 30px 14px 44px;
   }
 
   .countdown__panel .eyebrow {
@@ -1182,10 +1159,9 @@ dialog img {
   }
 
   .countdown__heart {
-    top: 44px;
+    bottom: 24px;
     width: 16px;
     height: 16px;
-    margin-top: 30px;
   }
 
   .countdown__heart::before,
@@ -1227,14 +1203,14 @@ dialog img {
   }
 
   .details__flowers {
-    top: -92px;
+    top: -104px;
     width: min(200px, 82%);
   }
 
   .details__grid {
     max-width: 320px;
     margin-top: 56px;
-    gap: 18px;
+    gap: 54px;
   }
 
   .details article {
@@ -1287,19 +1263,6 @@ dialog img {
   .gifts__icon {
     width: 74px;
     height: 74px;
-  }
-
-  .gifts__bouquet {
-    top: 54%;
-    width: 112px;
-  }
-
-  .gifts__bouquet--left {
-    left: -62px;
-  }
-
-  .gifts__bouquet--right {
-    right: -62px;
   }
 
   .section-wave {
