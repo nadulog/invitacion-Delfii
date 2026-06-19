@@ -1,31 +1,32 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>XV Emilia | Invitacion Digital</title>
+    <title>XV Luisana | Invitación Digital</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button class="audio-toggle" id="audioToggle" type="button" aria-label="Reproducir musica" aria-pressed="false">
+    <button class="audio-toggle" id="audioToggle" type="button" aria-label="Reproducir música" aria-pressed="false">
       <span class="audio-toggle__icon audio-toggle__icon--play" aria-hidden="true"></span>
       <span class="audio-toggle__icon audio-toggle__icon--pause" aria-hidden="true"></span>
     </button>
-    <audio id="invitationAudio" src="musica.mp3" preload="auto" loop></audio>
+    <audio id="invitationAudio" src="assets/audio/moonlight-ariana-grande.mp3" preload="auto" loop></audio>
 
     <main>
       <section class="hero" id="inicio">
         <div class="hero__media" aria-hidden="true">
-          <img class="hero__photo hero__photo--one active" src="foto%20de%20portada.jpg" alt="" />
-          <img class="hero__photo hero__photo--two" src="foto%20de%20portada2.jpg" alt="" />
+          <img class="hero__photo hero__photo--one active" src="assets/images/luisana-portada-1.jpeg" alt="" />
+          <img class="hero__photo hero__photo--two" src="assets/images/luisana-portada-2.jpeg" alt="" />
         </div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
           <p class="kicker">Mis quince años</p>
-          <h1>Emilia</h1>
+          <h1>Luisana</h1>
         </div>
         <div class="hero__wave" aria-hidden="true">
           <svg viewBox="0 0 1440 170" preserveAspectRatio="none" focusable="false">
@@ -41,16 +42,16 @@
           <span class="countdown__ring countdown__ring--one"></span>
           <span class="countdown__ring countdown__ring--two"></span>
           <span class="countdown__ring countdown__ring--three"></span>
-          <img class="countdown__butterflies" src="mariposas.png" alt="" aria-hidden="true" />
+          <img class="countdown__butterflies" src="assets/images/mariposas.png" alt="" aria-hidden="true" />
           <span class="countdown__sash"></span>
           <div class="countdown__flowers countdown__flowers--main"></div>
           <div class="countdown__flowers countdown__flowers--mini"></div>
         </div>
         <div class="countdown__panel">
-          <p class="eyebrow">Falta</p>
+          <p class="eyebrow">Faltan:</p>
           <h2>Cuenta regresiva</h2>
           <div class="countdown__grid" aria-live="polite">
-            <div><strong id="days">0</strong><span>Dias</span></div>
+            <div><strong id="days">0</strong><span>Días</span></div>
             <div><strong id="hours">0</strong><span>Hs</span></div>
             <div><strong id="minutes">0</strong><span>Min</span></div>
             <div><strong id="seconds">0</strong><span>Seg</span></div>
@@ -61,60 +62,74 @@
 
       <section class="intro section">
         <div class="intro__text">
-          <p class="eyebrow">Una noche especial</p>
-          <h2>Quiero celebrar mis 15 con vos</h2>
-          <p>Hay momentos que se guardan para siempre. Te espero para compartir una noche con musica, fotos, brindis y todos esos detalles que hacen que la fiesta sea unica.</p>
+          <p class="eyebrow">Una noche para recordar</p>
+          <h2>Quiero compartir mis 15 con las personas que quiero</h2>
+          <p>Hay momentos que se sueñan durante mucho tiempo y se guardan para siempre. Me encantaría vivir esta noche rodeada de abrazos, risas, música y todos los recuerdos que vamos a crear juntos.</p>
         </div>
         <div class="polaroid">
           <span class="polaroid__sprig polaroid__sprig--top" aria-hidden="true"></span>
-          <img src="3.jpg" alt="Foto de la cumpleanera" />
-          <span>Emi XV</span>
+          <img src="assets/images/luisana-galeria-8.jpeg" alt="Foto de Luisana" />
+          <span>Luisana XV</span>
           <span class="polaroid__sprig polaroid__sprig--bottom" aria-hidden="true"></span>
         </div>
       </section>
 
       <section class="details section" id="fiesta">
         <p class="eyebrow">Detalles del evento</p>
-        <h2>La fiesta</h2>
+        <h2>La Fiesta</h2>
         <div class="details__grid">
           <article class="details__card--with-flowers">
-            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <img class="details__flowers" src="assets/images/flores%20para%20cards.png" alt="" aria-hidden="true" />
             <span class="details__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M7 3v3" />
-                <path d="M17 3v3" />
-                <path d="M4 8h16" />
-                <path d="M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
-                <path d="M8 12h3" />
-                <path d="M8 16h5" />
+              <svg viewBox="0 0 48 48" focusable="false">
+                <circle cx="24" cy="25" r="13.5" />
+                <path d="M11.5 20.5h25" />
+                <path d="M11.5 25.5h25" />
+                <path d="M11.5 30.5h25" />
+                <path d="M18 12.7c-2.6 6.2-2.6 18.4 0 24.6" />
+                <path d="M30 12.7c2.6 6.2 2.6 18.4 0 24.6" />
+                <path d="M24 11.5v27" />
+                <path d="M38.5 8.5 40 12l3.5 1.5L40 15l-1.5 3.5L37 15l-3.5-1.5L37 12Z" />
+                <path d="M7.5 31.5 8.5 34l2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1Z" />
+                <circle cx="24" cy="25" r="3.2" fill="currentColor" />
               </svg>
             </span>
             <h3>Fecha</h3>
-            <p>Sabado 21 de noviembre de 2026</p>
-            <button class="detail-btn" type="button" data-url="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV%20Emilia&dates=20261122T000000Z/20261122T070000Z&details=Fiesta%20de%2015%20de%20Emilia">Agendar</button>
+            <p>Sábado 29 de agosto de 2026 - 21:00 a 05:00 hs</p>
+            <button class="detail-btn" type="button" data-url="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV%20Luisana&dates=20260830T000000Z/20260830T080000Z&details=Fiesta%20de%2015%20de%20Luisana">Agendar</button>
           </article>
           <article class="details__card--with-flowers">
-            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <img class="details__flowers" src="assets/images/flores%20para%20cards.png" alt="" aria-hidden="true" />
             <span class="details__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" />
-                <circle cx="12" cy="9" r="2.5" />
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M24 42s12-10.7 12-22A12 12 0 0 0 12 20c0 11.3 12 22 12 22Z" />
+                <circle cx="24" cy="20" r="5.2" />
+                <path d="M17 38.5c-5.7.8-9.5 2.5-9.5 4.5 0 2.5 7.4 4.4 16.5 4.4s16.5-1.9 16.5-4.4c0-2-3.8-3.7-9.5-4.5" />
+                <path d="M39 8.5 40.2 11l2.8 1.2-2.8 1.2L39 16l-1.2-2.6-2.8-1.2 2.8-1.2Z" />
+                <circle cx="24" cy="20" r="1.6" fill="currentColor" />
               </svg>
             </span>
             <h3>Lugar</h3>
-            <p>Salon Jardin del Lago - Buenos Aires</p>
-            <button class="detail-btn" type="button" data-url="https://www.google.com/maps/search/?api=1&query=Buenos%20Aires%20salon%20eventos">Ver mapa</button>
+            <p>Salón: Jerárquicos CAD - Comodoro Rivadavia, Chubut</p>
+            <button class="detail-btn" id="openMapModal" type="button">Ver mapa</button>
           </article>
           <article class="details__card--with-flowers">
-            <img class="details__flowers" src="flores%20para%20cards.png" alt="" aria-hidden="true" />
+            <img class="details__flowers" src="assets/images/flores%20para%20cards.png" alt="" aria-hidden="true" />
             <span class="details__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M9 4 6 6l-3 1.5L5 12l2-1v9h10v-9l2 1 2-4.5L18 6l-3-2a4 4 0 0 1-6 0Z" />
-                <path d="M9 4c.8 2 5.2 2 6 0" />
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M24 9c0-2.4 1.8-4.2 4.2-4.2 2.1 0 3.8 1.5 4.1 3.5.4 2.5-1 4.5-3.4 5.6L24 16.2" />
+                <path d="M24 16.2 11.5 22.5" />
+                <path d="M24 16.2 36.5 22.5" />
+                <path d="M16.5 22.8 11 41h26l-5.5-18.2" />
+                <path d="M18.5 23.5c1.2 2.3 3 3.5 5.5 3.5s4.3-1.2 5.5-3.5" />
+                <path d="M18 41c1.6-5.2 3.6-8 6-8s4.4 2.8 6 8" />
+                <path d="M39 17.5 40 20l2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1Z" />
+                <circle cx="24" cy="34" r="1.6" fill="currentColor" />
               </svg>
             </span>
             <h3>Dress code</h3>
-            <p>Elegante sport. Colores claros, plateados o rosados son bienvenidos.</p>
+            <p>Elegante sport.</p>
+            <button class="detail-btn" id="openDressModal" type="button">Ver looks</button>
           </article>
         </div>
       </section>
@@ -127,43 +142,75 @@
       </div>
 
       <section class="gifts section" id="regalos">
-        <img class="gifts__icon" src="regalo.gif" alt="" aria-hidden="true" />
-        <p class="eyebrow">Un detalle especial</p>
-        <h2>Regalos</h2>
-        <p class="section__lead">Si deseas regalarme algo más que tu hermosa presencia...</p>
-        <button class="primary-btn gifts__button" id="openGiftModal" type="button">Ver mas</button>
+        <div class="gifts__shell">
+          <div class="gifts__art" aria-hidden="true">
+            <span class="gifts__disc gifts__disc--one"></span>
+            <span class="gifts__disc gifts__disc--two"></span>
+            <img class="gifts__image" src="assets/images/gift-box.png" alt="" />
+          </div>
+          <div class="gifts__content">
+            <p class="eyebrow">Un gesto con cariño</p>
+            <h2>Regalos</h2>
+            <p>Tu presencia es el regalo más importante. Si además querés acompañarme con un detalle, podés encontrar los datos acá.</p>
+            <button class="primary-btn gifts__button" id="openGiftModal" type="button">Ver datos</button>
+          </div>
+        </div>
       </section>
 
       <section class="music section">
-        <p class="eyebrow">Modo fiesta</p>
-        <h2>Musica</h2>
-        <iframe
-          class="spotify"
-          title="Playlist de Spotify"
-          src="https://open.spotify.com/embed/playlist/7c5mFVQQuOW3j0qU5jjmaI?utm_source=generator"
-          width="100%"
-          height="352"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"></iframe>
+        <div class="music__shell">
+          <div class="music__copy">
+            <p class="eyebrow">Modo fiesta</p>
+            <h2>Música</h2>
+          </div>
+          <div class="music__player">
+            <span class="music__disc music__disc--one" aria-hidden="true"></span>
+            <span class="music__disc music__disc--two" aria-hidden="true"></span>
+            <iframe
+              class="spotify"
+              data-testid="embed-iframe"
+              title="Playlist de Spotify"
+              src="https://open.spotify.com/embed/playlist/1RcBQz3cwqw7WycEFvAs38?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <a class="music__playlist-link" href="https://open.spotify.com/playlist/1RcBQz3cwqw7WycEFvAs38" target="_blank" rel="noreferrer">Ver playlist</a>
+          </div>
+        </div>
       </section>
 
       <section class="gallery section" id="galeria">
         <p class="eyebrow">Recuerdos</p>
-        <h2>Galeria de  fotos</h2>
-        <div class="carousel" aria-label="Galeria de fotos">
+        <h2>Galería de fotos</h2>
+        <div class="carousel" aria-label="Galería de fotos">
           <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Foto anterior">&lsaquo;</button>
           <div class="carousel__viewport">
             <button class="carousel__slide active" type="button">
-              <img src="1.jpg" alt="Foto de galeria 1" />
+              <img src="assets/images/luisana-galeria-1.jpeg" alt="Foto de Luisana 1" />
             </button>
             <button class="carousel__slide" type="button">
-              <img src="2.jpg" alt="Foto de galeria 2" />
+              <img src="assets/images/luisana-galeria-2.jpeg" alt="Foto de Luisana 2" />
             </button>
             <button class="carousel__slide" type="button">
-              <img src="3.jpg" alt="Foto de galeria 3" />
+              <img src="assets/images/luisana-galeria-3.jpeg" alt="Foto de Luisana 3" />
             </button>
             <button class="carousel__slide" type="button">
-              <img src="foto%20de%20portada2.jpg" alt="Foto de galeria 4" />
+              <img src="assets/images/luisana-galeria-4.jpeg" alt="Foto de Luisana 4" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="assets/images/luisana-galeria-5.jpeg" alt="Foto de Luisana 5" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="assets/images/luisana-galeria-6.jpeg" alt="Foto de Luisana 6" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="assets/images/luisana-galeria-7.jpeg" alt="Foto de Luisana 7" />
+            </button>
+            <button class="carousel__slide" type="button">
+              <img src="assets/images/luisana-galeria-8.jpeg" alt="Foto de Luisana 8" />
             </button>
           </div>
           <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Foto siguiente">&rsaquo;</button>
@@ -171,15 +218,83 @@
         </div>
       </section>
 
+      <section class="bloomkeep section" id="bloomkeep">
+        <div class="bloomkeep__shell">
+          <div class="bloomkeep__content">
+            <img class="bloomkeep__logo" src="assets/images/bloomkeep-logo.png" alt="Bloomkeep" />
+            <p class="eyebrow">Red social del evento</p>
+            <h2>Bloomkeep</h2>
+            <p>Durante la fiesta vas a poder subir tus fotos, dejar mensajes en el libro de firmas y reaccionar a los recuerdos de la noche. Todo se vive en tiempo real y también puede aparecer en las pantallas del salón.</p>
+            <div class="bloomkeep__actions">
+              <a class="primary-btn bloomkeep__button" href="https://app.bloomkeep.site/luisana-15" target="_blank" rel="noreferrer">Entrar a Bloomkeep</a>
+              <span>Fotos, mensajes y ranking de la fiesta</span>
+            </div>
+          </div>
+
+          <div class="bloomkeep__showcase" aria-hidden="true">
+            <div class="bloomkeep__phone">
+              <div class="bloomkeep__app-header">
+                <span class="bloomkeep__home-icon"></span>
+                <strong>Luisana</strong>
+                <span class="bloomkeep__super">SUPER</span>
+              </div>
+              <div class="bloomkeep__app-screen">
+                <div class="bloomkeep__toolbar">
+                  <span>Ordenar</span>
+                  <span>Filtrar</span>
+                </div>
+                <div class="bloomkeep__masonry">
+                  <figure class="bloomkeep__tile bloomkeep__tile--wide">
+                    <img src="assets/images/luisana-galeria-8.jpeg" alt="" />
+                    <figcaption><span></span> 12</figcaption>
+                  </figure>
+                  <figure class="bloomkeep__tile bloomkeep__tile--tall">
+                    <img src="assets/images/luisana-galeria-4.jpeg" alt="" />
+                    <figcaption><span></span> 18</figcaption>
+                  </figure>
+                  <figure class="bloomkeep__tile">
+                    <img src="assets/images/luisana-galeria-6.jpeg" alt="" />
+                    <figcaption><span></span> 9</figcaption>
+                  </figure>
+                </div>
+                <div class="bloomkeep__tabs">
+                  <span class="active">Álbum</span>
+                  <span>Subir</span>
+                </div>
+              </div>
+            </div>
+            <div class="bloomkeep__ranking-card">
+              <p><span aria-hidden="true">🏆</span> Ranking</p>
+              <span>Invitados con más likes a través de sus fotos</span>
+              <ol>
+                <li><em>1</em><i>V</i><span><strong>Valentina Ríos</strong><small>34 fotos likeadas</small></span><b>137</b></li>
+                <li><em>2</em><i>M</i><span><strong>Mateo Silva</strong><small>29 fotos likeadas</small></span><b>82</b></li>
+                <li><em>3</em><i>J</i><span><strong>Jazmín Torres</strong><small>24 fotos likeadas</small></span><b>68</b></li>
+                <li><em>4</em><i>L</i><span><strong>Luca Moreno</strong><small>18 fotos likeadas</small></span><b>65</b></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="rsvp section" id="rsvp">
         <h2>Confirmar asistencia</h2>
-        <p>Confirmar antes del 1 de noviembre</p>
-        <a class="rsvp__button" href="https://bloomdate-rsvp.netlify.app/r/cumple-xv" target="_blank" rel="noreferrer">Confirmar asistencia</a>
+        <p>Confirmar antes del 10 de Agosto</p>
+        <a class="rsvp__button" href="https://bloomdate-rsvp.netlify.app/r/cumple-xv-luisana" target="_blank" rel="noreferrer">Confirmar asistencia</a>
+      </section>
+
+      <section class="farewell" aria-label="Mensaje final de Luisana">
+        <img src="assets/images/luisana-portada-1.jpeg" alt="Luisana" />
+        <div class="farewell__overlay"></div>
+        <div class="farewell__content">
+          <h2>Luisana</h2>
+          <p>Te espero!</p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Diseñado con <span aria-hidden="true">❤</span> por <strong>Bloomdate</strong></p>
+      <p>Hecho con <span aria-hidden="true">♥</span> por <strong>Bloomdate</strong></p>
       <div class="site-footer__links" aria-label="Redes de Bloomdate">
         <a href="https://wa.me/541140436324?text=quiero%20mas%20info%20sobre%20invitaciones" target="_blank" rel="noreferrer" aria-label="WhatsApp de Bloomdate">
           <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
@@ -204,6 +319,7 @@
           </svg>
         </a>
       </div>
+      <small>Derechos reservados por Bloomdate® 2026</small>
     </footer>
 
     <dialog id="lightbox">
@@ -211,18 +327,68 @@
       <img alt="Foto ampliada" />
     </dialog>
 
-    <dialog id="giftModal" class="gift-modal" aria-labelledby="giftModalTitle">
-      <div class="gift-modal__card">
-        <button class="gift-modal__close" id="closeGiftModal" type="button" aria-label="Cerrar">x</button>
-        <div class="gift-modal__flowers" aria-hidden="true"></div>
-        <div class="gift-modal__icon" aria-hidden="true">
-          <img src="regalo.gif" alt="" />
-        </div>
-        <h2 id="giftModalTitle">Regalos</h2>
-        <p>Alias:bloomdate.invitaciones</p>
+    <dialog id="mapModal" class="map-modal" aria-labelledby="mapModalTitle">
+      <div class="map-modal__card">
+        <button class="map-modal__close" id="closeMapModal" type="button" aria-label="Cerrar">&times;</button>
+        <p class="map-modal__eyebrow">Ubicación</p>
+        <h2 id="mapModalTitle">Jerárquicos CAD</h2>
+        <p class="map-modal__address">Bouchardo 1350, Comodoro Rivadavia, Chubut</p>
+        <button class="map-modal__map" id="openExternalMap" type="button" aria-label="Abrir ubicación en Google Maps">
+          <span class="map-modal__map-link">Abrir en Maps</span>
+          <iframe
+            title="Mapa del salon"
+            src="https://www.google.com/maps?q=Bouchardo%201350%20Comodoro%20Rivadavia%20Chubut&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </button>
       </div>
     </dialog>
 
+    <dialog id="dressModal" class="dress-modal" aria-labelledby="dressModalTitle">
+      <div class="dress-modal__card">
+        <button class="dress-modal__close" id="closeDressModal" type="button" aria-label="Cerrar">&times;</button>
+        <h2 id="dressModalTitle">Código de Vestimenta</h2>
+        <p class="dress-modal__text">Elegante sport es un punto medio entre lo formal y lo relajado: prolijo, cómodo y con un toque de noche.</p>
+        <img class="dress-modal__image" src="assets/images/dress-code-elegante-sport.png" alt="Inspiración de look elegante sport" />
+      </div>
+    </dialog>
+
+    <dialog id="giftModal" class="gift-modal" aria-labelledby="giftModalTitle">
+      <div class="gift-modal__card">
+        <button class="gift-modal__close" id="closeGiftModal" type="button" aria-label="Cerrar">&times;</button>
+        <div class="gift-modal__flowers" aria-hidden="true"></div>
+        <div class="gift-modal__icon" aria-hidden="true">
+          <img src="assets/images/gift-box.png" alt="" />
+        </div>
+        <p class="gift-modal__eyebrow">Gracias por acompañarme</p>
+        <h2 id="giftModalTitle">Regalos</h2>
+        <p class="gift-modal__text">Tu presencia es lo más importante. Si querés tener un gesto conmigo, podés hacerlo por transferencia o acercar tu regalo el día de la fiesta; vamos a tener una caja preparada para recibirlos con mucho cariño.</p>
+        <div class="gift-modal__details">
+          <div class="gift-modal__data-card">
+            <span>A nombre de</span>
+            <strong>Luisana Echezarreta</strong>
+          </div>
+          <div class="gift-modal__data-card gift-modal__data-card--alias">
+            <span>Alias</span>
+            <div class="gift-modal__copy-row">
+              <strong id="giftAlias">Luchi.333.mp</strong>
+              <button class="gift-modal__copy" id="copyGiftAlias" type="button" aria-label="Copiar alias" title="Copiar alias">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="8" y="8" width="11" height="11" rx="1.5"></rect>
+                  <path d="M5 15H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"></path>
+                </svg>
+                <span class="sr-only">Copiar alias</span>
+              </button>
+            </div>
+            <small id="copyGiftAliasStatus" aria-live="polite"></small>
+          </div>
+          <div class="gift-modal__data-card">
+            <span>Entidad</span>
+            <strong>Mercado Pago</strong>
+          </div>
+        </div>
+      </div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
