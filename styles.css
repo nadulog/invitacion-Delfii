@@ -1377,6 +1377,21 @@ form {
   animation: introBallFloat 6s ease-in-out infinite reverse;
 }
 
+.spotify-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.spotify-wrap__cover-link {
+  position: absolute;
+  z-index: 2;
+  inset: 8px auto 8px 8px;
+  width: 136px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .spotify {
   display: block;
   width: 100%;
@@ -3054,6 +3069,10 @@ dialog img {
     max-width: 360px;
     height: 132px;
     border-radius: 10px;
+  }
+
+  .spotify-wrap__cover-link {
+    width: 116px;
   }
 
   .music__playlist-link {
