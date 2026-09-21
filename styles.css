@@ -6,8 +6,8 @@
   --wine: #f7f7f7;
   --mint: #9fa1a6;
   --gold: #c9c9c9;
-  --terracotta: #b8664b;
-  --terracotta-shine: linear-gradient(135deg, #7d3f2f 0%, #d48968 46%, #a9543c 100%);
+  --terracotta: #ef168f;
+  --terracotta-shine: linear-gradient(135deg, #8f0756 0%, #ff4db1 46%, #c50b72 100%);
   --silver-shine: linear-gradient(110deg, #8b8d93 0%, #ffffff 38%, #c9c9c9 62%, #f7f7f7 100%);
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.58);
 }
@@ -27,9 +27,11 @@ body {
   font-family: Montserrat, Arial, sans-serif;
 }
 
+html.modal-open,
 body.modal-open {
   overflow: hidden;
   touch-action: none;
+  overscroll-behavior: none;
 }
 
 img {
@@ -1244,7 +1246,11 @@ form {
   margin: 0;
   padding: 88px max(18px, calc((100vw - 1060px) / 2));
   overflow: hidden;
-  background: #fff;
+  color: #f7f7f7;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(239, 22, 143, 0.34), transparent 28%),
+    radial-gradient(circle at 82% 76%, rgba(239, 22, 143, 0.22), transparent 26%),
+    linear-gradient(145deg, #050505 0%, #190712 48%, #050505 100%);
   text-align: center;
 }
 
@@ -1270,10 +1276,10 @@ form {
   position: absolute;
   inset: 0;
   background:
-    conic-gradient(from 204deg at 18% 100%, transparent 0 18deg, rgba(0, 0, 0, 0.07) 20deg 24deg, transparent 28deg 62deg, rgba(184, 102, 75, 0.12) 65deg 69deg, transparent 73deg),
-    conic-gradient(from 322deg at 86% 100%, transparent 0 20deg, rgba(0, 0, 0, 0.06) 23deg 27deg, transparent 31deg),
-    radial-gradient(circle, rgba(0, 0, 0, 0.22) 0 1px, transparent 1.8px),
-    radial-gradient(circle, rgba(184, 102, 75, 0.36) 0 1.1px, transparent 2px),
+    conic-gradient(from 204deg at 18% 100%, transparent 0 18deg, rgba(255, 255, 255, 0.07) 20deg 24deg, transparent 28deg 62deg, rgba(239, 22, 143, 0.16) 65deg 69deg, transparent 73deg),
+    conic-gradient(from 322deg at 86% 100%, transparent 0 20deg, rgba(255, 255, 255, 0.06) 23deg 27deg, transparent 31deg),
+    radial-gradient(circle, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(239, 22, 143, 0.38) 0 1.1px, transparent 2px),
     radial-gradient(circle, rgba(180, 180, 180, 0.36) 0 1px, transparent 2px);
   background-size: 135% 135%, 142% 135%, 96px 120px, 142px 170px, 72px 98px;
   background-position: -28% 0, 116% 0, 0 0, 60px 40px, 22px 18px;
@@ -1320,9 +1326,66 @@ form {
 }
 
 .music__copy h2 {
-  margin-bottom: 0;
-  color: #151515;
+  margin-bottom: 12px;
+  color: #f7f7f7;
   text-shadow: none;
+}
+
+.music__intro {
+  max-width: 610px;
+  margin: 0 auto;
+  color: rgba(247, 247, 247, 0.78);
+  font-size: clamp(0.96rem, 2vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.music__record {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: clamp(280px, 42vw, 430px);
+  aspect-ratio: 1;
+  margin: 10px auto 12px;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 20deg, transparent 0 20%, rgba(255, 255, 255, 0.08) 25%, transparent 31% 66%, rgba(239, 22, 143, 0.1) 72%, transparent 78%),
+    repeating-radial-gradient(circle, rgba(255, 255, 255, 0.075) 0 1px, transparent 2px 9px),
+    #070707;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.58), 0 0 72px rgba(239, 22, 143, 0.32);
+  animation: musicRecordSpin 10s linear infinite;
+}
+
+.music__record::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #070707;
+}
+
+.music__record span {
+  display: grid;
+  place-items: center;
+  width: clamp(86px, 12vw, 118px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--terracotta-shine);
+  line-height: 1;
+}
+
+.music__record strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.music__record small {
+  font-size: clamp(0.58rem, 1.2vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .music__playlist-link {
@@ -1331,8 +1394,8 @@ form {
   justify-content: center;
   min-height: 38px;
   border-radius: 999px;
-  color: #050505;
-  background: var(--silver-shine);
+  color: #fff;
+  background: var(--terracotta-shine);
   margin-top: 18px;
   padding: 9px 18px;
   font-size: 0.88rem;
@@ -1344,8 +1407,8 @@ form {
 
 .music__playlist-link:hover {
   transform: translateY(-2px);
-  color: #fff;
-  background: var(--terracotta-shine);
+  color: #050505;
+  background: var(--silver-shine);
 }
 
 .music__player {
@@ -1375,32 +1438,6 @@ form {
   width: clamp(46px, 8vw, 68px);
   filter: drop-shadow(0 0 24px rgba(216, 137, 104, 0.22));
   animation: introBallFloat 6s ease-in-out infinite reverse;
-}
-
-.spotify-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
-
-.spotify-wrap__cover-link {
-  position: absolute;
-  z-index: 2;
-  inset: 8px auto 8px 8px;
-  width: 136px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.spotify {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  height: 152px;
-  border: 0;
-  border-radius: 12px;
-  background: #111;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
 
 @keyframes musicDiscoDrift {
@@ -1459,7 +1496,7 @@ form {
     radial-gradient(circle at 18% 28%, rgba(184, 102, 75, 0.34), transparent 28%),
     radial-gradient(circle at 80% 20%, rgba(148, 94, 205, 0.42), transparent 24%),
     radial-gradient(circle at 68% 86%, rgba(247, 247, 247, 0.16), transparent 26%),
-    linear-gradient(135deg, #080207 0%, #16081d 42%, #060606 72%, #1a0906 100%);
+    linear-gradient(135deg, #080207 0%, #2a071c 42%, #060606 72%, #4b052d 100%);
   background-size: 145% 145%, 150% 145%, 100% 100%, 100% 100%, 100% 100%, auto;
   animation: bloomkeepClubPulse 7.4s ease-in-out infinite;
 }
@@ -1615,6 +1652,20 @@ form {
     linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
     rgba(0, 0, 0, 0.72);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.62), inset 0 0 0 1px rgba(184, 102, 75, 0.08);
+}
+
+@keyframes musicRecordSpin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.bloomkeep__real-cover {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .bloomkeep__app-header {
@@ -1866,7 +1917,7 @@ form {
 }
 
 .bloomkeep__ranking-card li:nth-child(3) i {
-  background: linear-gradient(135deg, #512f28, #b8664b);
+  background: linear-gradient(135deg, #7f064c, #ef168f);
 }
 
 .bloomkeep__ranking-card li:nth-child(4) i {
@@ -2459,7 +2510,7 @@ dialog img {
   background:
     radial-gradient(circle at 18% 18%, rgba(184, 102, 75, 0.22), transparent 30%),
     radial-gradient(circle at 82% 78%, rgba(247, 247, 247, 0.14), transparent 26%),
-    linear-gradient(135deg, #050505, #111 54%, #080403);
+    linear-gradient(135deg, #050505, #160914 54%, #31051f);
   box-shadow: 0 26px 80px rgba(0, 0, 0, 0.58);
   text-align: center;
 }
@@ -2669,6 +2720,25 @@ dialog img {
 .map-modal__close:hover {
   color: var(--terracotta);
   transform: scale(1.08);
+}
+
+.gift-modal__close,
+.dress-modal__close,
+.map-modal__close {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gift-modal__close:focus,
+.gift-modal__close:focus-visible,
+.dress-modal__close:focus,
+.dress-modal__close:focus-visible,
+.map-modal__close:focus,
+.map-modal__close:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .map-modal__map {
@@ -3063,16 +3133,6 @@ dialog img {
   .music__disc--two {
     right: -20px;
     bottom: -24px;
-  }
-
-  .spotify {
-    max-width: 360px;
-    height: 132px;
-    border-radius: 10px;
-  }
-
-  .spotify-wrap__cover-link {
-    width: 116px;
   }
 
   .music__playlist-link {

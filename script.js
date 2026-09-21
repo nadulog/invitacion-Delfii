@@ -1,4 +1,5 @@
 ﻿const eventDate = new Date("2026-08-29T21:00:00-03:00");
+eventDate.setTime(new Date("2026-10-21T21:00:00-03:00").getTime());
 const whatsappNumber = "5491100000000";
 const invitationAudio = document.querySelector("#invitationAudio");
 const audioToggle = document.querySelector("#audioToggle");
@@ -87,30 +88,11 @@ document.querySelectorAll(".detail-btn[data-url]").forEach((button) => {
 });
 
 const modalDialogs = [];
-let lockedScrollY = 0;
 
 function updateModalScrollLock() {
   const hasOpenModal = modalDialogs.some((dialog) => dialog.open);
-  if (hasOpenModal && !document.body.classList.contains("modal-open")) {
-    lockedScrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${lockedScrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-    document.body.classList.add("modal-open");
-    return;
-  }
-
-  if (!hasOpenModal && document.body.classList.contains("modal-open")) {
-    document.body.classList.remove("modal-open");
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    window.scrollTo(0, lockedScrollY);
-  }
+  document.documentElement.classList.toggle("modal-open", hasOpenModal);
+  document.body.classList.toggle("modal-open", hasOpenModal);
 }
 
 function openDialog(dialog) {
@@ -123,7 +105,7 @@ function closeDialog(dialog) {
   updateModalScrollLock();
 }
 
-const mapUrl = "https://maps.app.goo.gl/VBSru3SuwxqLoxfn7";
+const mapUrl = "https://www.google.com/maps/search/?api=1&query=Olga%20Cossettini%201031%2C%20CABA";
 const mapModal = document.querySelector("#mapModal");
 const openMapModal = document.querySelector("#openMapModal");
 const closeMapModal = document.querySelector("#closeMapModal");
