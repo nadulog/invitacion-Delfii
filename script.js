@@ -1,5 +1,5 @@
 ﻿const eventDate = new Date("2026-08-29T21:00:00-03:00");
-eventDate.setTime(new Date("2026-10-21T21:00:00-03:00").getTime());
+eventDate.setTime(new Date("2026-10-24T21:00:00-03:00").getTime());
 const whatsappNumber = "5491100000000";
 const invitationAudio = document.querySelector("#invitationAudio");
 const audioToggle = document.querySelector("#audioToggle");
